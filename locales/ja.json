@@ -38,7 +38,7 @@
   "Please enter a valid email address": "有効なメールアドレスを入力してください",
   "Posted by": "投稿者",
   "Previous": "前へ",
-  "Published with": "公開",
+  "Published with {ghost}": "{ghost}で公開",
   "Recent articles": "最近の記事",
   "Recommended for you": "あなたへのおすすめ",
   "Scroll to top": "トップへスクロール",
