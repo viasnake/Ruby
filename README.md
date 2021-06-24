@@ -1,3 +1,7 @@
+# viasnake.com-theme
+
+[viasnake.com](https://viasnake.com)で使用されているGhostのテーマリポジトリです。元リポジトリは[TryGhost/Ruby](https://github.com/TryGhost/Ruby)です。
+
 # Ruby
 
 A multi-column theme with a unique card layout. Share your posts with contemporary style. Completely free and fully responsive, released under the MIT license.
@@ -37,4 +41,7 @@ yarn zip
 
 # Copyright & License
 
+> This repository has been forked. Any code added in this repository is an MIT Licence.
+
 Copyright (c) 2013-2021 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2021 viasnake - Released under the [MIT license](LICENSE).
