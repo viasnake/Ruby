@@ -1,11 +1,28 @@
+b-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
 *.gz
-*.zip
-*.db
 
-assets/mix-manifest.json
+pids
+logs
+results
 
 npm-debug.log
 node_modules
+package-lock.json
+
+.idea/*
+*.iml
+projectFilesBackup
 
 .DS_Store
-.idea
+
+dist/
+
+config.json
+changelog.md
+changelog.md.bk
