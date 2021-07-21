@@ -1,30 +1,37 @@
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-inner">
-            <div class="social">
-                {{#if @site.facebook}}
-                    <a class="social-item social-item-facebook"
-                        href="{{facebook_url @site.facebook}}" target="_blank"
-                        rel="noopener noreferrer" aria-label="Facebook">
-                        <i class="icon icon-facebook"></i>
-                    </a>
-                {{/if}}
-                {{#if @site.twitter}}
-                    <a class="social-item social-item-twitter"
-                        href="{{twitter_url @site.twitter}}" target="_blank"
-                        rel="noopener noreferrer" aria-label="Twitter">
-                        <i class="icon icon-twitter"></i>
-                    </a>
-                {{/if}}
-                <a class="social-item social-item-rss"
-                    href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/"
-                    target="_blank" rel="noopener noreferrer" aria-label="RSS">
-                    <i class="icon icon-rss"></i>
-                </a>
-            </div>
-            <div class="copyright">
-                Powered by <a href="https://ghost.org/" target="_blank">Ghost</a>
-            </div>
-        </div>
-    </div>
+{{!--
+This footer template is shared across all the pages.
+--}}
+
+<footer class="m-footer">
+  <div class="m-footer__content">
+    {{#if @site.secondary_navigation}}
+      <nav class="m-footer__nav-secondary" role="navigation" aria-label="{{t "Secondary menu in footer"}}">
+        {{navigation type="secondary"}}
+      </nav>
+    {{/if}}
+    <nav class="m-footer-social">
+      {{#if @site.facebook}}
+        <a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener" aria-label="Facebook">
+          <span class="icon-facebook" aria-hidden="true"></span>
+        </a>
+      {{/if}}
+      {{#if @site.twitter}}
+        <a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="icon-twitter" aria-hidden="true"></span>
+        </a>
+      {{/if}}
+      <a href="https://twitch.tv/via_snake" target="_blank" rel="noopener" aria-label="Twitch">
+        <span class="icon-twitch" aria-hidden="true"></span>
+      </a>
+      <a href="https://github.com/viasnake" target="_blank" rel="noopener" aria-label="GitHub">
+        <span class="icon-github" aria-hidden="true"></span>
+      </a>
+      <a href="{{@site.url}}/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>{{@site.title}} &copy; {{date format="YYYY"}}</span>
+    </p>
+  </div>
 </footer>

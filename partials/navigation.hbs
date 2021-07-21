@@ -1,8 +1,20 @@
-<ul class="nav-list u-plain-list">
+{{!--
+This navigation template is shared across all the pages.
+Also it includes the big submenu.
+--}}
+
+{{#if isSecondary}}
+  <ul class="m-secondary-menu">
     {{#foreach navigation}}
-        <li
-            class="menu-item menu-item-{{slug}}{{#if current}} menu-item-current{{/if}}">
-            <a class="menu-item-link" href="{{url absolute="true"}}">{{label}}</a>
-        </li>
+      <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
+        <a href="{{url absolute="true"}}">{{label}}</a>
+      </li>
     {{/foreach}}
-</ul>
+  </ul>
+{{else}}
+  {{#foreach navigation}}
+    <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
+      <a href="{{url absolute="true"}}">{{label}}</a>
+    </li>
+  {{/foreach}}
+{{/if}}
